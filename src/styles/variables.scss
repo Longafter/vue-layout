@@ -1,0 +1,14 @@
+// aside
+$sideBarBg: #3a3a3a;
+
+// header
+$headerBg: #ffffff;
+
+// main
+$mainBg: #e9eef3;
+
+:export {
+  sideBarBg: $sideBarBg;
+  headerBg: $headerBg;
+  mainBg: $mainBg;
+}
