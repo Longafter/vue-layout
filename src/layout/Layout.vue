@@ -6,7 +6,7 @@
         <!-- 菜单 -->
         <el-menu
           class="el-menu-vertical-demo"
-          background-color="#545c64"
+          :background-color="variables.sideBarBg"
           text-color="#fff"
           active-text-color="#ffd04b"
           :unique-opened="true"
@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import variables from '@/styles/variables.scss';
+
 export default {
   name: 'Layout',
   data() {
@@ -55,6 +57,10 @@ export default {
     // 获取路由
     routes() {
       return this.$router.options.routes;
+    },
+    // 全局sass变量
+    variables() {
+      return variables;
     }
   },
   methods: {
