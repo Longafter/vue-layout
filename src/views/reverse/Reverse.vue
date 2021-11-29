@@ -52,6 +52,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
+    transform: rotateY(0deg);
     backface-visibility: hidden;
     transition: 1.5s;
     border: 1px solid green;
@@ -86,6 +87,7 @@ export default {
     }
   }
 
+  // 这两句必须在写下面
   .contain-Before {
     transform: rotateY(180deg);
   }
