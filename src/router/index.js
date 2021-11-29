@@ -58,6 +58,19 @@ const routes = [
         meta: { title: 'Mix Chart' }
       }
     ]
+  },
+  {
+    path: '/example',
+    name: 'Example',
+    component: Layout,
+    children: [
+      {
+        path: '/reverse',
+        name: 'Reverse',
+        component: () => import('@/views/reverse/Reverse.vue'),
+        meta: { title: 'Reverse' }
+      }
+    ]
   }
 ]
 
