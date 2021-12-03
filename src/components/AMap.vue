@@ -1,5 +1,11 @@
 <template>
-  <div class='amap-container'>
+  <div 
+    :style="{
+      width: width,
+      height: height
+    }"
+    class='amap-container' 
+  >
     <div ref="amap" class="amap">
       <slot></slot>
     </div>
@@ -59,12 +65,8 @@ export default {
 };
 </script>
 
-
 <style lang='scss' scoped>
 .amap-container {
-  width: 100%;
-  height: 100%;
-
   .amap {
     width: 100%;
     height: 100%;

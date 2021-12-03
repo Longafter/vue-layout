@@ -1,5 +1,5 @@
 <template>
-  <AMap height="100%" :options="amapOptions" @map="getAMapData" />
+  <AMap width="100%" height="100%" :options="amapOptions" @map="getAMapData" />
 </template>
 
 <script>
