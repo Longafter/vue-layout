@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import loadScripts from '@/common/map/pzMap.js'
+import loadScripts from '@/common/map/loadScripts.js'
 
 export default {
   name: 'AMapContainer',
