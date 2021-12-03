@@ -9,9 +9,9 @@ import Layout from '@/layout/Layout.vue'
 const routes = [
   {
     path: '/',
-    name: 'Dashboard',
     component: Layout,
     redirect: '/dashboard',
+    name: 'Dashboard',
     children: [
       {
         path: '/dashboard',
@@ -22,22 +22,11 @@ const routes = [
     ]
   },
   {
-    path: '/icon',
-    name: 'Icons',
-    component: Layout,
-    children: [
-      {
-        path: '/icon',
-        name: 'Icons',
-        component: () => import('@/views/icon/Icon.vue'),
-        meta: { title: 'Icons' }
-      }
-    ]
-  },
-  {
     path: '/charts',
-    name: 'Charts',
     component: Layout,
+    redirect: '/charts/keyboard',
+    name: 'Charts',
+    meta: { title: 'Example', icon: 'el-icon-s-help'},
     children: [
       {
         path: '/keyboard',
@@ -61,14 +50,36 @@ const routes = [
   },
   {
     path: '/example',
-    name: 'Example',
     component: Layout,
+    redirect: '/example/reverse',
+    name: 'Example',
+    meta: { title: 'Example', icon: 'el-icon-s-help'},
     children: [
       {
         path: '/reverse',
         name: 'Reverse',
         component: () => import('@/views/reverse/Reverse.vue'),
         meta: { title: 'Reverse' }
+      },
+      {
+        path: '/flex-grid',
+        name: 'FlexGrid',
+        component: () => import('@/views/flexGrid/FlexGrid.vue'),
+        meta: { title: 'FlexGrid' }
+      }
+    ]
+  },
+  {
+    path: '/map',
+    component: Layout,
+    redirect: '/map',
+    name: 'Map',
+    children: [
+      {
+        path: '/map',
+        name: 'Map',
+        component: () => import('@/views/map/Map.vue'),
+        meta: { title: 'Map' }
       }
     ]
   }
